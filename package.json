@@ -1,0 +1,31 @@
+{
+  "name": "prevent-heroku-idling",
+  "version": "1.0.0",
+  "description": "prevent heroku app from idling by pinging it once in a while",
+  "main": "server.js",
+  "engines": {
+    "node": "15.4.0",
+    "npm": "7.0.15"
+  },
+  "scripts": {
+    "start": "NODE_ENV=development ./node_modules/.bin/netlify-lambda serve src",
+    "build": "NODE_ENV=production ./node_modules/.bin/netlify-lambda build src"
+  },
+  "keywords": [
+    "nodejs",
+    "express",
+    "netlify-lambda",
+    "serverless",
+    "node-cron",
+    "node-fetch"
+  ],
+  "author": "Marius Ailisoaie",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "express": "^4.17.1",
+    "netlify-lambda": "^2.0.2",
+    "node-cron": "^2.0.3",
+    "serverless-http": "^2.6.0"
+  }
+}
