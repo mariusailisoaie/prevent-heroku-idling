@@ -8,7 +8,7 @@ const router = Router()
 
 process.env.SILENCE_EMPTY_LAMBDA_WARNING = true
 
-schedule('*/25 * * * *', async () => {
+schedule('* * * * * *', async () => {
   const { data } = await axios.get('https://crown-clothing-copenhagen.herokuapp.com/api/ping')
   console.log(data)
 })
